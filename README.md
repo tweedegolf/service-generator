@@ -11,7 +11,7 @@ classes that are defines in `services.yml` but do not exist in the current names
 Using [Composer][composer] add the bundle to your requirements:
 
 ```bash
-    composer require --dev tweedegolf/service-generator
+composer require --dev tweedegolf/service-generator
 ```
 
 ### Add the bundle to your AppKernel
