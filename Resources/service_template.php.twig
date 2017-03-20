@@ -1,0 +1,38 @@
+<?php
+
+namespace {{ package }};
+
+{% for import in imports %}
+use {{ import }};
+{% endfor %}
+
+/**
+ * Class {{ class_name }}
+ * @package {{ package }}
+ */
+class {{ class_name }}
+{
+{% for argument in arguments %}
+    /**
+     * @var {{ argument.type }}
+     */
+    private ${{ argument.variable }};
+
+{% endfor %}
+    /**
+     * {{ class_name }} constructor.
+     *
+{% for argument in arguments %}
+     * @param {{ argument.type }} ${{ argument.variable }}
+{% endfor %}
+     */
+    public function __construct(
+{% for argument in arguments %}
+        {{ argument.hint }} ${{ argument.variable }}{{ not loop.last ? ', ' }}
+{% endfor %}
+    ) {
+{% for argument in arguments %}
+        $this->{{ argument.variable }} = ${{ argument.variable }};
+{% endfor %}
+    }
+}
