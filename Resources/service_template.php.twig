@@ -28,7 +28,7 @@ class {{ class_name }}
      */
     public function __construct(
 {% for argument in arguments %}
-        {{ argument.hint }} ${{ argument.variable }}{{ not loop.last ? ', ' }}
+        {{ argument.hint }}{{ argument.hint ? ' ' }}${{ argument.variable }}{{ not loop.last ? ', ' }}
 {% endfor %}
     ) {
 {% for argument in arguments %}
