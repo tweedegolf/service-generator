@@ -1,6 +1,6 @@
 {
     "name": "tweedegolf/service-generator",
-    "description": "Generate Symfony services",
+    "description": "Generate Symfony service based on definition in services.yml",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
