@@ -32,3 +32,5 @@ public function registerBundles()
     return $bundles;
 }
 ```
+
+[composer]: https://getcomposer.org/
